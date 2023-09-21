@@ -9,7 +9,6 @@ import { listDataUpdate } from '../Redux/employeeCrud';
 import CustomTypography from './customTypo';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { EmployeeData, ExperienceDetail } from '../Constants/interface';
-import CustomButton from './CustomButton';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import { Container, Grid } from '@mui/material';
 

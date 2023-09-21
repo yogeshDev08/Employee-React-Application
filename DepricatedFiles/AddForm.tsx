@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import CustomButton from '../src/Component/CustomButton'
 import BankDetailsForm from '../src/Component/BankDetailsForm'
 import ExperienceForm from '../src/Component/ExperienceDetailsForm'
 import PersonDetailForm from '../src/Component/PersonalDetailsForm'
+import { Button } from '@mui/material'
 
 const AddForm = () => {
   const [pageChange, setPageChange] = useState(1)
@@ -26,11 +26,11 @@ const AddForm = () => {
     {pageChange === 3 && (
       <ExperienceForm/>
     )}
-    <CustomButton disabled={pageChange === 1}
+    <Button disabled={pageChange === 1}
         onClick={() => handleStepper(pageChange)}
         style={{ width: "500px" }}>
         Back
-      </CustomButton>
+      </Button>
   </div>
   )
 }
