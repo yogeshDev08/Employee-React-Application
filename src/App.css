@@ -32,7 +32,34 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.App .deleteButton {
+  margin-left: 2%;
+  background-color: rgb(209, 2, 2);
+}
+
+.App .deleteButton:hover {
+  margin-left: 2%;
+  background-color: rgb(138, 39, 39);
+}
+
+.App .add-btn {
+  position: absolute;
+  margin: 0.7% 35%;
+  z-index: 999;
+  /* background-color: #c300c3; */
+}
+.App .add-btn:hover {
+  background-color: #960096;
+}
+
+.bankForm .backbutton{
+  margin-top: -63px !important;
+  margin-left: 753px !important;
 }
