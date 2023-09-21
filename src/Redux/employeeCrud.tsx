@@ -19,13 +19,18 @@ import { staticList } from '../Constants/StaticData'
     return data
   })
 
+  export const changeTheme = createAsyncThunk('appSizes/changeTheme', async (data: any) => {
+    return data
+  })
+
 export const appEmployeeSlice = createSlice({
   name: 'appSizes',
   initialState: {
     list: [...staticList],
     personalDetails: {},
     bankDetails: {},
-    experienceDetails:[]
+    experienceDetails:[],
+    theme:"light"
   },
   reducers: {},
   extraReducers: builder => {
@@ -41,6 +46,9 @@ export const appEmployeeSlice = createSlice({
       })
       .addCase(listDataUpdate.fulfilled, (state, action) => {
         state.list = action.payload || []
+      })
+      .addCase(changeTheme.fulfilled, (state, action) => {
+        state.theme = action.payload || "light"
       })
   }
 })

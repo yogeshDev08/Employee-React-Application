@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import CustomButton from '../Component/CustomButton'
 import ExperienceForm from '../Component/ExperienceDetailsForm'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,6 +11,7 @@ import CardContent from '@mui/material/CardContent';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
+import { Button } from '@mui/material'
 
 const steps = ['Personal Details Form', 'Bank Details Form', 'Experience Form'];
 
@@ -78,7 +78,7 @@ const EditForm = () => {
 
         </CardContent>
         <div  className='backbutton' style={handleBackBtnCss()}>
-          <CustomButton
+          <Button
             variant='outlined'
             sx={{width: pageChange === 3 ? "13%": "none", marginRight: pageChange === 3 ? "198px": "none", }}
             onClick={() => {
@@ -92,7 +92,7 @@ const EditForm = () => {
             }}
             >
           {pageChange !== 1 ? "Back" : "Cancel"}
-        </CustomButton>
+        </Button>
     </div>
       </Card >
 
