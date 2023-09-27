@@ -122,11 +122,11 @@ function ExperienceForm() {
     return (
         <Container>
             <CustomTypography value={"Experience Details Form"} />
-            <Root 
-            className={classes.root} 
-            onSubmit={handleSubmit} 
-            onFocus={(e) => setError({ ...error, [e.target.id]: e.target.value })} 
-            onBlur={(e) => setError({ ...error, [e.target.id]: e.target.value })}>
+            <Root
+                className={classes.root}
+                onSubmit={handleSubmit}
+                onFocus={(e) => setError({ ...error, [e.target.id]: e.target.value })}
+                onBlur={(e) => setError({ ...error, [e.target.id]: e.target.value })}>
 
                 {formData.map((employeeDetail) => (
                     <Grid
@@ -141,6 +141,7 @@ function ExperienceForm() {
                         }}>
                         <Grid item xs={6}>
                             <TextField
+                                className='testAnimation'
                                 id={`Company/${employeeDetail.id}`}
                                 label="Company Name"
                                 name="companyName"
@@ -158,6 +159,7 @@ function ExperienceForm() {
                         </Grid>
                         <Grid item xs={3}>
                             <TextField
+                                className='testAnimation'
                                 id={`Duration/${employeeDetail.id}`}
                                 label="Duration (Years)"
                                 name="duration"
@@ -172,6 +174,7 @@ function ExperienceForm() {
                         </Grid>
                         <Grid item xs={3}>
                             <Select
+                                className='testAnimation'
                                 id={`Designation/${employeeDetail.id}`}
                                 label="Designation"
                                 name="designation"
@@ -197,12 +200,12 @@ function ExperienceForm() {
                     </Grid>
                 ))}
                 <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-                    <Button type="button" variant="outlined" onClick={addExperience} style={{ margin: "1% 0", width: "316px" }}>
+                    <Button className="animationBtn1" type="button" variant="outlined" onClick={addExperience} style={{ margin: "1% 0", width: "316px" }}>
                         Add Experience
                     </Button>
                 </Grid>
                 <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button className="animationBtn1" variant="contained" color="primary" type="submit">
                         Submit & Finish
                     </Button>
                 </Grid>

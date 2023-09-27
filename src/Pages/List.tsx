@@ -19,11 +19,11 @@ function ActionCellRender({ params }: any) {
   return (
     <>
       <Link to={`/edit/${params.row.id}`}>
-        <Button className='editButton' variant='contained'>
+        <Button className='editButton animationBtn1' variant='contained'>
           Edit
         </Button>
       </Link>
-      <Button className='deleteButton' onClick={() => setOpen(!open)}>
+      <Button className='deleteButton animationBtn1' onClick={() => setOpen(!open)}>
         Delete
       </Button>
       <CustomModal
@@ -70,7 +70,10 @@ const ListPage = () => {
 
   return (
     <>
-      <Typography className='p-10' >Employee CRUD operations.</Typography>
+      <Typography className='p-10' sx={{
+        fontWeight: '700',
+        fontSize: 'x-large'
+      }} >Employee CRUD operations.</Typography>
       <RenderList list={store.list} />
     </>
   )
@@ -81,7 +84,7 @@ function RenderList({ list }: RenderListProps) {
   return (
     <Box sx={{ height: "100vh", width: '100%' }}>
       <Card style={{ boxShadow: "1px 4px 10px -1px #000", padding: "1%" }}>
-        <Button className="add-btn" color='primary' variant='contained' onClick={() => navigate('/add')}>
+        <Button className="add-btn animationBtn1" color='primary' variant='contained' onClick={() => navigate('/add')}>
           Add
         </Button>
         <DataGrid

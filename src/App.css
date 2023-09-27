@@ -59,3 +59,38 @@
   margin-top: -63px !important;
   margin-left: 753px !important;
 }
+
+/* styles.css */
+.animationBtn1 {
+  animation: slideIn 1s ease-in-out; /* Adjust duration and easing as needed */
+  transform-origin: left center;
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(10px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+.testAnimation{
+  animation: fadeIn 0.5s ease-in-out; /* Adjust duration and easing as needed */
+  /* transform-origin: left center; */
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(0px, 10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}

@@ -25,8 +25,8 @@ function CustomModal(props: SimpleDialogProps) {
             <Dialog onClose={handleClose} open={open}>
                 <DialogTitle>Do you want to delete this Employee Details ?</DialogTitle>
                 <div style={{ display: 'flex', justifyContent: "space-between", padding: "5%" }}>
-                    <Button onClick={() => handleDeleteEntity(Number(data))}>Yes</Button>
-                    <Button onClick={() => handleClose()}>No</Button>
+                    <Button className="animationBtn1" onClick={() => handleDeleteEntity(Number(data))}>Yes</Button>
+                    <Button className="animationBtn1" onClick={() => handleClose()}>No</Button>
                 </div>
             </Dialog>
         );

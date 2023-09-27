@@ -12,7 +12,7 @@ import { bankDetailsUpdate } from '../Redux/employeeCrud';
 import CustomTypography from './customTypo';
 
 interface BankFormData {
-    bankName: string; 
+    bankName: string;
     ifscCode: string;
     accountNumber: string;
     panCardNumber: string;
@@ -57,6 +57,7 @@ function BankDetailForm({ setPageChange }: any) {
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="bankName"
                             name="bankName"
@@ -71,6 +72,7 @@ function BankDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="ifscCode"
                             name="ifscCode"
@@ -85,6 +87,7 @@ function BankDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="accountNumber"
                             name="accountNumber"
@@ -99,6 +102,7 @@ function BankDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="panCardNumber"
                             name="panCardNumber"
@@ -111,8 +115,8 @@ function BankDetailForm({ setPageChange }: any) {
                             helperText={formik.touched.panCardNumber && formik.errors.panCardNumber}
                         />
                     </Grid>
-                    <Grid item xs={12}  sx={{display: "flex", justifyContent: "flex-end"}}>
-                        <Button variant="contained" color="primary" type="submit">
+                    <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+                        <Button className="animationBtn1" variant="contained" color="primary" type="submit">
                             Next Page
                         </Button>
                     </Grid>

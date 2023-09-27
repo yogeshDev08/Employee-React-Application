@@ -3,8 +3,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { bankDetailsUpdate } from '../Redux/employeeCrud';
-import CustomTypography from './customTypo';
+import { bankDetailsUpdate } from '../src/Redux/employeeCrud';
+import CustomTypography from '../src/Component/customTypo';
 
 const classes = {
   root: `root`,
@@ -100,7 +100,7 @@ function BankDetailsForm({ setPageChange }: any) {
           onChange={handleChange}
           style={fieldCss}
         />
-        <Button type="submit" variant="contained" color="primary" style={fieldCss}>
+        <Button className="animationBtn1" type="submit" variant="contained" color="primary" style={fieldCss}>
           Next Page
         </Button>
       </Root>

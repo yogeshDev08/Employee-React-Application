@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
@@ -45,9 +45,9 @@ function PersonDetailForm({ setPageChange }: any) {
             lastName: "",
             state: "",
             zipCode: ""
-          },
+        },
         validationSchema,
-        
+
         onSubmit: (values) => {
             // Handle form submission here, e.g., send data to the server
             console.log('Form submitted with values:', values);
@@ -71,11 +71,12 @@ function PersonDetailForm({ setPageChange }: any) {
     }, [store])
     return (
         <Container className='personalFrom'>
-            <CustomTypography value={"Personal Details Form"}/>
+            <CustomTypography value={"Personal Details Form"} />
             <form onSubmit={formik.handleSubmit}>
                 <Grid container spacing={2}>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="firstName"
                             name="firstName"
@@ -90,6 +91,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="lastName"
                             name="lastName"
@@ -106,6 +108,7 @@ function PersonDetailForm({ setPageChange }: any) {
                         <FormControl fullWidth variant="outlined">
                             <InputLabel id="gender-label">Gender</InputLabel>
                             <Select
+                                className='testAnimation'
                                 labelId="gender-label"
                                 id="gender"
                                 name="gender"
@@ -126,6 +129,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="email"
                             name="email"
@@ -140,6 +144,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="contactNumber"
                             name="contactNumber"
@@ -154,6 +159,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="city"
                             name="city"
@@ -168,6 +174,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="state"
                             name="state"
@@ -182,6 +189,7 @@ function PersonDetailForm({ setPageChange }: any) {
                     </Grid>
                     <Grid item xs={6}>
                         <TextField
+                            className='testAnimation'
                             fullWidth
                             id="zipCode"
                             name="zipCode"
@@ -194,8 +202,8 @@ function PersonDetailForm({ setPageChange }: any) {
                             helperText={formik.touched.zipCode && formik.errors.zipCode}
                         />
                     </Grid>
-                    <Grid item xs={12} sx={{display: "flex", justifyContent: "flex-end"}}>
-                        <Button variant="contained" color="primary" type="submit">
+                    <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
+                        <Button className="animationBtn1" variant="contained" color="primary" type="submit">
                             Next Page
                         </Button>
                     </Grid>
