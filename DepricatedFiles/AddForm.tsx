@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import BankDetailsForm from '../src/Component/BankDetailsForm'
+import BankDetailsForm from './BankDetailsForm'
 import ExperienceForm from '../src/Component/ExperienceDetailsForm'
 import PersonDetailForm from '../src/Component/PersonalDetailsForm'
 import { Button } from '@mui/material'
@@ -26,7 +26,7 @@ const AddForm = () => {
     {pageChange === 3 && (
       <ExperienceForm/>
     )}
-    <Button disabled={pageChange === 1}
+    <Button className="animationBtn1" disabled={pageChange === 1}
         onClick={() => handleStepper(pageChange)}
         style={{ width: "500px" }}>
         Back

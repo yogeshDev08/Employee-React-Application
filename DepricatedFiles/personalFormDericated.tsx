@@ -74,15 +74,16 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                 setPageChange(2)
             } else {
                 setErrorMessage('Email id already exist')
-            } 
+            }
         }
     };
 
     return (
         <>
-        <CustomTypography value={"Personal Detail From"}/>
+            <CustomTypography value={"Personal Detail From"} />
             <Root className={classes.root} onSubmit={handleSubmit}>
                 <TextField
+                    className='testAnimation'
                     label="First Name"
                     name="firstName"
                     variant="outlined"
@@ -94,6 +95,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     style={fieldCss}
                 />
                 <TextField
+                    className='testAnimation'
                     label="Last Name"
                     name="lastName"
                     variant="outlined"
@@ -120,6 +122,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     </Select>
                 </FormControl>
                 <TextField
+                    className='testAnimation'
                     label="Email"
                     name="email"
                     variant="outlined"
@@ -130,8 +133,9 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     onChange={handleChange}
                     style={fieldCss}
                 />
-                {errorMessage && <Typography style={{color: "red"}}>{errorMessage}</Typography>}
+                {errorMessage && <Typography style={{ color: "red" }}>{errorMessage}</Typography>}
                 <TextField
+                    className='testAnimation'
                     label="Contact Number"
                     name="contactNumber"
                     variant="outlined"
@@ -143,6 +147,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     style={fieldCss}
                 />
                 <TextField
+                    className='testAnimation'
                     label="City"
                     name="city"
                     variant="outlined"
@@ -154,6 +159,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     style={fieldCss}
                 />
                 <TextField
+                    className='testAnimation'
                     label="State"
                     name="state"
                     variant="outlined"
@@ -165,6 +171,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     style={fieldCss}
                 />
                 <TextField
+                    className='testAnimation'
                     label="Zip Code"
                     name="zipCode"
                     variant="outlined"
@@ -175,7 +182,7 @@ function PersonalDetailsFrom({ setPageChange }: any) {
                     onChange={handleChange}
                     style={fieldCss}
                 />
-                <Button type="submit" variant="contained" color="primary" style={fieldCss}>
+                <Button className="animationBtn1" type="submit" variant="contained" color="primary" style={fieldCss}>
                     Next Page
                 </Button>
             </Root>

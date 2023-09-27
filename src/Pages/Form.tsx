@@ -79,24 +79,19 @@ const EditForm = () => {
         </CardContent>
         <div  className='backbutton' style={handleBackBtnCss()}>
           <Button
+          className="animationBtn1"
             variant='outlined'
+            color='primary'
             sx={{width: pageChange === 3 ? "13%": "none", marginRight: pageChange === 3 ? "198px": "none", }}
             onClick={() => {
               handleStepper(pageChange)
               if (pageChange === 1) navigate('/')
-            }}
-            style={{
-              backgroundColor: "transparent",
-              color: "black",
-              borderColor: "black"
             }}
             >
           {pageChange !== 1 ? "Back" : "Cancel"}
         </Button>
     </div>
       </Card >
-
-
     </div >
   )
 }
