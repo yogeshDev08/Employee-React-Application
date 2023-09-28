@@ -45,13 +45,9 @@ const EditForm = () => {
   }
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      marginTop: "5%"
-    }}>
-      <Card style={{boxShadow: "1px 4px 10px -1px #000", paddingBottom:"15px", width: "77%"}}>
-      <Stepper nonLinear activeStep={pageChange - 1} style={{padding:"1%"}}>
+    <div className='flex justify-center mt-28'>
+      <Card className='shadow-xl pb-4 w-3/4'>
+      <Stepper className='p-6'nonLinear activeStep={pageChange - 1}>
       {steps.map((label, index) => (
           <Step key={label}>
             <StepButton color="inherit">

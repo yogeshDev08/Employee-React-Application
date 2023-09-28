@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { EmployeeData, ExperienceDetail } from '../Constants/interface';
+import { EmployeeData, ExperienceDetail } from '../src/Constants/interface';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 interface Experience {

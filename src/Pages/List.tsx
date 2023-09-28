@@ -82,8 +82,8 @@ const ListPage = () => {
 function RenderList({ list }: RenderListProps) {
   const navigate = useNavigate()
   return (
-    <Box sx={{ height: "100vh", width: '100%' }}>
-      <Card style={{ boxShadow: "1px 4px 10px -1px #000", padding: "1%" }}>
+    <Box className="h-screen w-full">
+      <Card className='shadow-xl p-10'>
         <Button className="add-btn animationBtn1" color='primary' variant='contained' onClick={() => navigate('/add')}>
           Add
         </Button>
