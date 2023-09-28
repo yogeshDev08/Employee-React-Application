@@ -152,7 +152,6 @@ function ExperienceForm() {
                                 type="text"
                                 value={employeeDetail.companyName}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e, employeeDetail)}
-                                style={{ marginBottom: "1%" }}
                                 error={error && error[`Company/${employeeDetail.id}`] === "" && "Please fill the Company name"}
                                 helperText={error && error[`Company/${employeeDetail.id}`] === "" && "Please fill the Company name"}
                             />
@@ -200,7 +199,7 @@ function ExperienceForm() {
                     </Grid>
                 ))}
                 <Grid item xs={12} sx={{ display: "flex", justifyContent: "flex-end" }}>
-                    <Button className="animationBtn1" type="button" variant="outlined" onClick={addExperience} style={{ margin: "1% 0", width: "316px" }}>
+                    <Button className="animationBtn1 m-2 w-75" type="button" variant="outlined" onClick={addExperience}>
                         Add Experience
                     </Button>
                 </Grid>
