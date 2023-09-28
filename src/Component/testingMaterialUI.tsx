@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Menu, TextField, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 const TestingMaterialUI = () => {
-    const [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
     const [memberCount, setMemberCount] = useState({ Adults: 0, Childrens: 0 })
     const handleValue = (value: any) => {
         if (value.Adults > 0 || value.Childrens > 0)
             return `Adults: ${value.Adults} and Childrens: ${value.Childrens}`
         else return null
     }
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+      };
     return (
         <div>
             <TextField
@@ -19,11 +23,12 @@ const TestingMaterialUI = () => {
                 aria-haspopup="listbox"
                 aria-controls="lock-menu"
                 aria-expanded={open ? 'true' : undefined}
-                onClick={() => setOpen(!open)}
+                onClick={(e: any) => handleClick(e)}
                 variant="outlined" />
                 <Menu
                     open={open}
-                    onClose={() => setOpen(!open)}
+                    anchorEl={anchorEl}
+                    onClose={() => setAnchorEl(null)}
                     MenuListProps={{
                         'aria-labelledby': 'lock-button',
                         role: 'listbox',
@@ -54,7 +59,7 @@ function FamilyCount({ label, setMemberCount, memberCount }: any) {
             <Button onClick={() => setCount(count + 1)}>
                 <AddIcon />
             </Button>
-            <TextField value={count} variant="outlined" />
+            <TextField autoFocus={false} disabled value={count} variant="outlined" />
             <Button onClick={() => {
                 if (count > 0) setCount(count - 1)
             }}>
